@@ -21,6 +21,7 @@ const History = ({ navigation }) => {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
+      key={item.id}
       style={styles.itemContainer}
       onPress={() => navigation.navigate('Result', { cards: item.cards, from: 'History' })}
     >

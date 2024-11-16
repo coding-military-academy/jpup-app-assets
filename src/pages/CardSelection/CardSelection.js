@@ -21,7 +21,7 @@ const CardSelection = ({ navigation }) => {
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity onPress={() => handleSelectCard(item)}>
+    <TouchableOpacity key={item.id} onPress={() => handleSelectCard(item)}>
       <Image
         source={require('../../../assets/card_back.png')}
         style={styles.cardImage}
