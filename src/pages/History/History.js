@@ -21,9 +21,12 @@ const History = ({ navigation }) => {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
-      key={item.id}
       style={styles.itemContainer}
-      onPress={() => navigation.navigate('Result', { cards: item.cards, from: 'History' })}
+      onPress={() => navigation.navigate('Result', { 
+        cards: item.cards, 
+        from: 'History', 
+        historyResult: item.result 
+    })}
     >
       <Text style={styles.date}>{formatDate(item.date)}</Text>
       {item.cards.map((card) => (
