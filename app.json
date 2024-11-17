@@ -19,10 +19,34 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "이 식별자는 귀하에게 개인화된 광고를 제공하는 데 사용됩니다."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4bd96d11-3c99-47c2-be05-09c67a21de1a"
+      }
     }
   }
 }
