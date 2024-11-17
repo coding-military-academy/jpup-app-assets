@@ -69,7 +69,10 @@ export default StyleSheet.create({
     fontSize: 16,
     color: colors.text,
     fontFamily: fonts.regular,
-    textAlign: 'left',
+    textAlign: 'center',
+    alignSelf:'center',
+    marginTop:20,
     lineHeight: 22,
+    paddingBottom:50
   },
 });

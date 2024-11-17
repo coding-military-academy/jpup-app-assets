@@ -2,9 +2,11 @@
 import { addDoc, collection, getDoc, getDocs } from 'firebase/firestore';
 import { db, auth } from './firebase';
 
-export const saveReading = async (cards) => {
+export const saveReading = async (cards, result) => {
   const user = auth.currentUser;
   if (user) {
+    console.log(">>> data")
+    console.log(cards)
     await addDoc(collection(db, 'history'), {
       userId: user.uid,
       cards: cards.map((card) => ({
@@ -14,6 +16,7 @@ export const saveReading = async (cards) => {
         frontImage: card.frontImage
       })),
       date: new Date().toISOString(),
+      result, // 그당시 타로 결괏값도 저장
     });
   }
 };
@@ -21,6 +24,7 @@ export const saveReading = async (cards) => {
 export const getReadings = async () => {
   const user = auth.currentUser;
   if (user) {
+
     const querySnapshot = await getDocs(collection(db, 'history'));
     
     // 가져온 데이터를 배열로 변환

@@ -1,0 +1,1 @@
+export const OPEN_AI_KEY = 'sk-ZxBWfAMT_6Z_qAEVtacpU6szqA-7EPKPW2OzLQr9WgNCn-ZV1M2rWtH7YmxhG-J84A'
