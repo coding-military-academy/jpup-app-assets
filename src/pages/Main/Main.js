@@ -8,8 +8,14 @@ import styles from './styles';
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 const windowWidth = Dimensions.get('window').width;
-// const unitId = Platform.OS == 'android' ? 'ca-app-pub-7866773177976164~1173874426' : 'ca-app-pub-7866773177976164/4037727980'
-//하단 계정은 테스트 아이디
+//우리가 구글 애드몹에서 가로 배너 광고 단위를 생성하고 만든 키값이다.
+//ios용 android용 따로따로 두개를 만들면 키값이 두개가 생성된다.
+//? 물음표 바로 다음에 오는 값으로는 안드로이드 키값을
+//: 세미 콜론 옆에 오는 값은 iOS 키값으로 교체해주자. 
+
+// const unitId = Platform.OS == 'android' 
+//? 'ca-app-pub-7866773177976164~1173874426' 
+//: 'ca-app-pub-7866773177976164/4037727980'
 const unitId = TestIds.BANNER
 
 const Main = ({ navigation }) => {
